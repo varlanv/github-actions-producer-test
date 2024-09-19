@@ -8,6 +8,8 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: varlanv/github-actions-producer-test
+    - run: pwd
+      shell: bash
     - run: ls -lah
       shell: bash
     - run: cat ./docker/Dockerfile
