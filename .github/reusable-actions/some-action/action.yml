@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
     - name: Docker read
-    - run: ls -lah
+      run: ls -lah
       shell: bash
     - run: cat .Dockerfile
       shell: bash
