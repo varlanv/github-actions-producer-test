@@ -1,2 +1,13 @@
 name: Some workflow
 
+on:
+  workflow_call:
+
+jobs:
+  whatever:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: "Check current dir"
+      - run: ls -lah
