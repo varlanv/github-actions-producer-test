@@ -8,8 +8,7 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: varlanv/github-actions-producer-test
-    - name: Read dockerfile
+    - run: ls -lah
       shell: bash
-      run: ls -lah
     - run: cat ./docker/Dockerfile
       shell: bash
