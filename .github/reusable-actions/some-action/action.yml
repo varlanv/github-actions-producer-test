@@ -6,6 +6,8 @@ runs:
   steps:
     - name: Checkout producer repository
       uses: actions/checkout@v3
+      with:
+        repository: varlanv/github-actions-producer-test
     - name: Read dockerfile
       shell: bash
       run: ls -lah
