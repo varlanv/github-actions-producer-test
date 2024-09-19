@@ -7,7 +7,9 @@ jobs:
   whatever:
     runs-on: ubuntu-latest
     steps:
+      - name: Ls before checkout
+        run: find .
       - name: Checkout
         uses: actions/checkout@v2
-      - name: "Check current dir"
-        run: ls -lah
+      - name: Ls after checkout
+        run: find .
