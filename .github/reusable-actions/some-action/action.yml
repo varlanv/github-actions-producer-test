@@ -4,12 +4,7 @@ description: 'Greet someone'
 runs:
   using: "composite"
   steps:
-    - name: Checkout producer repository
-      uses: actions/checkout@v3
-      with:
-        repository: varlanv/github-actions-producer-test
-    - run: pwd
-      shell: bash
+    - name: Docker read
     - run: ls -lah
       shell: bash
     - run: cat ./docker/Dockerfile
