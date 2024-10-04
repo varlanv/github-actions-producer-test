@@ -1,0 +1,16 @@
+name: Release candidate
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy ${{ matrix.env }}
+    runs-on: ubuntu-latest
+    environment: ${{ matrix.env }}
+    strategy:
+      matrix:
+        env: [DEV, TEST, UAT, PROD]
+    steps:
+      - name: "Run"
+        run: echo "Run"
