@@ -1,28 +1,17 @@
-name: Some workflow
+name: Deploy
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
-    branches:
-      - main
-  workflow_call:
+    tags:
+      - "v*"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Run"
-        run: echo "Run"
   deploy:
     runs-on: ubuntu-latest
-    needs: build
     environment: ${{ matrix.env }}
     strategy:
       matrix:
-        env: [dev, prod, uat]
+        env: [DEV, TEST, UAT, PROD]
     steps:
-      - name: "Deploy"
-        run: echo "Deploy"
-
+      - name: "Run"
+        run: echo "Run"
