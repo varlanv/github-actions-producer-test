@@ -1,9 +1,7 @@
-name: Release PROD
+name: Deploy [DEV, TEST]
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
 
 jobs:
   deploy:
